@@ -66,7 +66,7 @@
 
 nav.navbar{
   background-color: var(--black2-color);
-  padding: 1.3rem 0;
+  padding: 1rem 0;
   
 }
 nav.navbar i{
@@ -483,6 +483,9 @@ section.contact-us .contact-body .contact-form label{
 
   /* media query*/
   @media (max-width: 991.98px) {
+    nav.navbar {
+      padding: .9rem 0;
+  }
     section.about p{
       font-size: 18px;
       width: 70%;
@@ -612,10 +615,10 @@ footer .email a , footer .number a{
   font-size: 16px;
 }
 section.rights .container p{
-  font-size: 18px;
+  font-size: 16px;
 }
 section.rights .container img{
-  width: 70px;
+  width: 60px;
 }
 section.projects .img-project {
   position: relative;
