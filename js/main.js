@@ -19,9 +19,7 @@ if(bars != null && close != null){
   function showBG() {
     let scroll = window.scrollY;
     let isNavTop = scroll < 200;
-    // console.log(scroll)
     let nav = document.getElementById('nav');
-    // Compare the scroll position to 50
     if ( isNavTop) {
       nav.classList.remove('bgShow');
     } else {
@@ -43,6 +41,27 @@ if (Body.style.direction = 'rtl') {
   rtlValue = true;
 }
 
+$('.owl-carousel.services').owlCarousel({
+  rtl: rtlValue,
+  loop:true,
+  margin:25,
+  nav:false,
+  dots: false,
+  autoplay:true,
+  autoplayTimeout:2500,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:1
+      },
+      1000:{
+          items:2
+      }
+  }
+})
+
 $('.owl-carousel').owlCarousel({
   rtl: rtlValue,
   loop:true,
@@ -63,3 +82,4 @@ $('.owl-carousel').owlCarousel({
       }
   }
 })
+

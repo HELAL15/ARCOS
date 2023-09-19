@@ -15,8 +15,8 @@
   ---color: #7E7E7E; */
   --dark-blue-color: #082140;
   /* ---color: #BBBBBB;
-  ---color: #838383;
-  ---color: #151315; */
+  ---color: #838383;*/
+  --black3-color: #151315; 
   --grey-color: #7A7F80;
   /* ---color: #E1E1E1;
   ---color: #ECECEC;
@@ -179,20 +179,27 @@ section.projects{
   height: 85vh;
   overflow-y: scroll;
 }
-section.projects .img-project{
+.project{
+  padding: 3rem 0;
+  background-color: var(--black3-color);
+}
+section.projects .img-project,
+.project .img-project{
   position: relative;
   max-height: 450px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-section.projects .img-project img{
+section.projects .img-project img ,
+.project .img-project img{
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.projects .img-project .name-project{
+section.projects .img-project .name-project ,
+.project .img-project .name-project{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -208,7 +215,8 @@ section.projects .img-project .name-project{
   transition: .3s;
   opacity: 0;
 }
-section.projects .img-project:hover .name-project{
+section.projects .img-project:hover .name-project,
+.project .img-project:hover .name-project{
   opacity: 1;
 }
 /* section partners*/
@@ -477,6 +485,34 @@ section.contact-us .contact-body .contact-form label{
   color: var(--black2-color) !important;
   font-size: 18px;
 }
+
+/* other header for works section */
+
+.other-header{
+  background-color: var(--black2-color);
+  padding-bottom: 7rem;
+}
+.other-header.services{
+  padding-bottom: 0rem !important;
+}
+header.other-header {
+  height: 100% !important;
+}
+.other-header .header h2{
+  color: var(--white-color);
+}
+section.partners .owl-theme.services .owl-nav{
+  display: none !important;
+}
+
+section.partners .owl-theme.services .owl-stage-outer {
+  margin-right: 0rem;
+}
+
+
+
+
+
 
 
 
