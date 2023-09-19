@@ -79,6 +79,9 @@ nav.navbar i.close{
   display: none;
 }
 
+nav.navbar .nav-logo{
+  width: 100px;
+}
 
 
   /* header*/
