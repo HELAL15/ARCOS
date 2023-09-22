@@ -547,7 +547,9 @@ section.contact-us .contact-body .contact-form label{
 .contact-us .header h2{
   color: var(--black-color);
 }
-
+ .header.dark h2{
+  color: var(--black-color);
+}
 .contact-us .links a{
   color: var(--black-color);
   border: 1px solid var(--black-color);
@@ -980,8 +982,16 @@ section.partners .owl-theme.services .owl-stage-outer {
   margin-bottom: 1rem;
 }
 
-
-
+.owl-theme.project-info .owl-nav {
+  margin-top: 10px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  margin: 0 9rem;
+}
+.owl-theme.project-info .owl-nav button{
+  background-color: var(--black-color);
+}
 
 
 
@@ -1001,6 +1011,9 @@ section.partners .owl-theme.services .owl-stage-outer {
   }
   .contact-us .contacts {
     margin-right: 25rem;
+}
+.owl-theme.project-info .owl-nav {
+  margin: 0 3rem;
 }
   }
 
@@ -1120,6 +1133,9 @@ section.partners .owl-carousel.services .item {
 .single-project .nav-pills .nav-link {
   font-size: 22px;
 }
+.owl-theme.project-info .owl-nav {
+  margin: 0 3rem;
+}
   }
 
   @media (max-width: 768px) {
@@ -1224,5 +1240,8 @@ section.projects .img-project {
 .articles .card{
   width: 100% !important;
   /* margin: 0 1rem; */
+}
+.owl-theme.project-info .owl-nav {
+  margin: 0 1rem;
 }
   }

@@ -91,6 +91,29 @@ if (Body.style.direction = 'rtl') {
   rtlValue = true;
 }
 
+
+$('.owl-carousel.project-info').owlCarousel({
+  rtl: rtlValue,
+  loop:true,
+  margin:1,
+  nav:true,
+  dots: false,
+  autoplay:false,
+  autoplayTimeout:2500,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:1
+      },
+      1000:{
+          items:1
+      }
+  }
+})
+
+
 $('.owl-carousel.services').owlCarousel({
   rtl: rtlValue,
   loop:true,
