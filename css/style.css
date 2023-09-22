@@ -58,24 +58,26 @@
 #nav{
   /* display: none; */
   position: fixed;
-  top: -100%;left: 0;
+  top: -100px;left: 0;
   width: 100%;
   z-index: 2222;
   transition: .3s;
  
-}
-#nav.bgShow{
-  top: 0 !important;
-  display: block !important;
-  transition: .3s;
 }
 
 nav.navbar{
   background-color: var(--black2-color);
   padding: 1.5rem 0;
   transition: .3s;
-  /* overflow: ; */
-  
+  /* position: fixed; */
+  top: 0;left: 0;
+  width: 100%;
+    z-index: 2222;
+}
+#nav.bgShow{
+  top: 0 !important;
+  display: block !important;
+  transition: .3s;
 }
 nav.navbar i{
   font-size: 32px;
@@ -93,16 +95,17 @@ nav.navbar .nav-logo{
 /* menu nav*/
 
 .menu{
-  height: calc(100vh - 72px) !important;
+  height: calc(100vh - 88px) !important;
   background-color: var(--light-black-color);
-  position: absolute;
-  top: 72px;left: -100%;
+  position: fixed;
+  top: 88px;left: -100%;
   z-index: 2;
   width: 100%;
   transition: .3s;
 }
 .menu.active{
   left: 0 !important;
+  height: calc(100vh - 72px) !important;;
 }
 
 .menu .menu-nav{
@@ -483,12 +486,13 @@ section.rights .container img{
 
 /* contact-us*/
 .header{
-  padding: 2rem 0;
+  padding: 1.2rem 0;
 }
 .header h2{
   font-size: 32px;
   font-weight: bold;
   margin-bottom: -3rem;
+  color: var(--white-color);
 }
 .header img{
   width: 100%;
@@ -540,7 +544,9 @@ section.contact-us .contact-body .contact-form label{
   font-size: 16px;
   margin-bottom: .3rem;
 }
-
+.contact-us .header h2{
+  color: var(--black-color);
+}
 
 .contact-us .links a{
   color: var(--black-color);
@@ -577,7 +583,7 @@ section.contact-us .contact-body .contact-form label{
 .contact-us  .contacts-info .number ,
 .contact-us  .contacts-info .address{ 
   color: var(--black2-color) !important;
-  gap: 1rem;
+  gap: .5rem;
   font-size: 18px;
   align-items: center;
   margin-bottom: 1rem;
@@ -594,11 +600,50 @@ section.contact-us .contact-body .contact-form label{
   height: 100% !important;
   /* padding-bottom: 7rem; */
 }
-.other-header.services{
+.other-header.article{
   padding-bottom: 0rem !important;
+  background: url('../images/about.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 89vh !important;
+  position: relative;
 }
-.other-header .header h2{
+.other-header.article .overlay{
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  background-color: #00000092;
+  width: 100%;height: 100%;
+  z-index: 1;
+}
+.other-header.article .container{
+  height: 100%;
+}
+.other-header.article .header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* align-items: flex-end; */
+  position: relative;
+  z-index: 2;
+  height: 100%;
+
+}
+.other-header .header p{
   color: var(--white-color);
+  font-size: 24px;
+  /* width: 40%; */
+}
+.other-header.article .header h2{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--white-color);
+  /* margin: 1rem 0; */
+  margin-bottom: 2rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--white-color);
 }
 section.partners .owl-theme.services .owl-nav{
   display: none !important;
@@ -795,6 +840,149 @@ section.partners .owl-theme.services .owl-stage-outer {
   margin: 1rem 0 0 0;
   width: 50%;
 }
+.our-services{
+  padding: 5rem 0;
+}
+.our-services .nav-link.active{
+  color: var(--black-color) !important;
+}
+
+.our-services .nav-pills{
+  border-top: 5px solid var(--blue-color);
+}
+
+.our-services .tab-pane {
+  margin-top: 2rem;
+}
+
+.our-services .tab-pane p{
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--light-grey-color);
+}
+
+.our-services .tab-pane .groups{
+  margin-top: 2rem;
+}
+
+.our-services .tab-pane .groups h5{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--black-color);
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--blue-color);
+}
+
+.our-services .container{
+  position: relative;
+}
+.our-services .overlay{
+  position:  relative !important;
+}
+.our-services .overlay img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+          width: 100px;
+          bottom: 0;
+}
+
+
+
+
+.privacy p{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--light-grey-color);
+  margin-bottom: 1rem;
+}
+
+
+.single-project .title{
+  margin-bottom: 1rem;
+}
+.single-project .title h2{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.single-project  .nav-pills {
+  border-top: 5px solid var(--black-color) !important;
+}
+.single-project  .nav-link {
+  margin: 0 1rem;
+  border-bottom: 2px solid var(--black-color) !important;
+  border-radius: 0;
+}
+.single-project .links {
+  gap: .5rem;
+}
+.single-project .title .links a{
+  color: var(--black-color);
+  border: none;
+}
+.single-project .title .links a:hover{
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border: none;
+}
+
+.single-project .gallary img{
+  width: 100%;
+  max-height: 350px;
+  -o-object-fit: cover;
+  object-fit: cover;
+ 
+}
+
+.single-project .navigation .btn{
+  border-radius: 0;
+}
+
+.articles.single .card{
+  width: 100% !important;
+}
+.articles.single .header h2{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0rem;
+  color: var(--white-color);
+  border-bottom: 2px solid var(--white-color);
+  padding-bottom: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main-article .header h2{
+  border: none !important;
+  /* margin-bottom: 0rem; */
+}
+
+.main-article .header .links{
+  gap: .5rem !important;
+}
+.main-article .header .links a{
+  border: none;
+}
+.main-article p{
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--light-grey-color);
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+.main-article h3{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white-color);
+  margin-bottom: 1rem;
+}
+
+
+
+
 
 
 
@@ -811,6 +999,9 @@ section.partners .owl-theme.services .owl-stage-outer {
       padding: 0rem 0rem 0rem 0;
       margin: 0 2rem;
   }
+  .contact-us .contacts {
+    margin-right: 25rem;
+}
   }
 
 
@@ -922,6 +1113,12 @@ footer .email, footer .number, footer .email a, footer .number a {
 .articles .card{
   width: 47% !important;
   /* margin: 0 1rem; */
+}
+section.partners .owl-carousel.services .item {
+  margin-right: 0rem;
+}
+.single-project .nav-pills .nav-link {
+  font-size: 22px;
 }
   }
 
