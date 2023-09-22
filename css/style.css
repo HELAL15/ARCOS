@@ -6,6 +6,7 @@
   text-decoration: none !important;
   list-style: none !important;
   font-family: 'Janna LT', sans-serif;
+  /* overflow: hidden; */
 }
 :root {
 
@@ -14,8 +15,8 @@
   /* ---color: #C9C9C9;
   ---color: #7E7E7E; */
   --dark-blue-color: #082140;
-  /* ---color: #BBBBBB;
-  ---color: #838383;*/
+  /* ---color: #BBBBBB;*/
+  --grey2-color: #838383; 
   --black3-color: #151315; 
   --grey-color: #7A7F80;
   /* ---color: #E1E1E1;
@@ -39,7 +40,7 @@
 }
 @font-face {
   font-family: 'Janna LT'; 
-    src:  url('../webfonts/Janna\ LT\ Bold.ttf.ttf') ; 
+    src:  url('../webfonts/Janna\ LT\ Bold.ttf') ; 
     font-weight: bold;
     font-style: normal;
 }
@@ -50,23 +51,30 @@
   
   body{
     direction: rtl;
+    overflow-x: hidden !important;
   }
 
 /* navbar*/
 #nav{
-  display: none;
+  /* display: none; */
   position: fixed;
-  top: 0;left: 0;
+  top: -100%;left: 0;
   width: 100%;
   z-index: 2222;
+  transition: .3s;
+ 
 }
 #nav.bgShow{
-  display: flex !important;
+  top: 0 !important;
+  display: block !important;
+  transition: .3s;
 }
 
 nav.navbar{
   background-color: var(--black2-color);
-  padding: 1rem 0;
+  padding: 1.5rem 0;
+  transition: .3s;
+  /* overflow: ; */
   
 }
 nav.navbar i{
@@ -82,6 +90,91 @@ nav.navbar i.close{
 nav.navbar .nav-logo{
   width: 100px;
 }
+/* menu nav*/
+
+.menu{
+  height: calc(100vh - 72px) !important;
+  background-color: var(--light-black-color);
+  position: absolute;
+  top: 72px;left: -100%;
+  z-index: 2;
+  width: 100%;
+  transition: .3s;
+}
+.menu.active{
+  left: 0 !important;
+}
+
+.menu .menu-nav{
+  background-color: var(--light-color);
+  height: 100%;
+  padding: 4rem 4rem 1rem 2rem;
+}
+.menu .contacts{
+  z-index: 2 !important;
+  position: relative;
+}
+.menu .menu-nav .menu-links{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 75% ;
+  
+}
+.menu .menu-nav .menu-links a{
+  color: var(--black-color);
+  font-size: 22px;
+  font-weight: bold;
+  margin: .5rem 0;
+}
+
+.menu-nav .contacts .contacts-info a{
+  color: var(--black-color);
+}
+.menu-nav .contacts .contacts-info .email ,
+.menu-nav .contacts .contacts-info .number{
+  margin: .5rem;
+  gap: .5rem;
+}
+.menu-nav .contacts .links a ,
+.menu-nav .contacts .links i{
+  color: var(--black-color) !important;
+  border-color: none !important;
+  font-size: 20px !important;
+  transition: .3s;
+}
+
+.menu-nav .contacts .links a:hover {
+  color: var(--white-color) !important;
+  background-color: var(--black-color) !important;
+}
+.menu-nav .contacts .links a:hover i{
+  color: var(--white-color) !important;
+}
+.menu-work{
+  padding: 4rem 0 0 4rem ;
+}
+.menu-work .latest h2{
+  color: var(--white-color);
+  margin-bottom: 1rem;
+}
+
+.menu-work .latest img{
+  width: 60%;
+  max-height: 100%;
+}
+.img-menu-footer{
+  position: absolute;
+  bottom: 2rem;
+}
+
+
+
+
+
+
+
 
 
   /* header*/
@@ -97,7 +190,15 @@ nav.navbar .nav-logo{
     justify-content: center;
     align-items: center;
   }
-
+  .vjs-theme-fantasy .vjs-control-bar {
+    height: 54px;
+    /* opacity: 0; */
+    display: none;
+}
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+    content: "\f101";
+    display: none;
+}
   header .header-body .header-btns{
     position: absolute;
     bottom: 7%;
@@ -273,9 +374,9 @@ footer .container{
   
 }
 footer .logo img{
-  width: 20%;
+  width: 20% !important;
 }
-footer .container .overlay{
+ .overlay{
   display: flex;
   justify-content: flex-end;
   content: '';
@@ -283,11 +384,11 @@ footer .container .overlay{
   position: absolute;
   top: 0%;
   left: 0;
-  opacity: .1;
+  opacity: 1;
   height: 100%;
   width: 100%;
 }
-footer .container .overlay img{
+ .overlay img{
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -490,13 +591,11 @@ section.contact-us .contact-body .contact-form label{
 
 .other-header{
   background-color: var(--black2-color);
-  padding-bottom: 7rem;
+  height: 100% !important;
+  /* padding-bottom: 7rem; */
 }
 .other-header.services{
   padding-bottom: 0rem !important;
-}
-header.other-header {
-  height: 100% !important;
 }
 .other-header .header h2{
   color: var(--white-color);
@@ -509,8 +608,193 @@ section.partners .owl-theme.services .owl-stage-outer {
   margin-right: 0rem;
 }
 
+/* who we page*/
+.other-header.about{
+  background-color: var(--white-color) !important;
+  
+}
+.other-header.about .card ,
+.other-header.about .card-footer{
+  border: none;
+  border-radius: 0 !important;
+  background-color: transparent;
+}
+.other-header.about .card {
+  padding: 2rem 6.5rem 2rem 0;
+  margin: 0 2rem;
+}
+.other-header.about .card-footer{
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+.other-header.about .card-body h2{
+  font-size: 32px !important;
+  font-weight: bold ;
+  margin-bottom: 1.5rem;
+}
+.other-header.about .card-body p{
+  font-size: 18px;
+  font-size: 300;
+}
+.other-header.about .img-about{
+  background-color: var(--light-black-color);
+}
 
+.about-row{
+  margin-right: unset !important; 
+  margin-left: unset !important;
+  --bs-gutter-x: 0;
+}
+/* how do section*/
+.how-do{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.how-do .container{
+  position: relative;
+  /* height: 100%; */
+  z-index: 1;
+}
 
+.how-do .overlay{
+  /* display: flex;
+  justify-content: flex-end; */
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 1;
+  height:50%;
+  width: 100%;
+}
+.how-do .overlay img{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.how-do .header{
+  border-bottom: 1px solid var(--white-color);
+  padding: 0rem 0 4rem 0;
+}
+
+.how-do .nav-pills{
+  margin-top: 2rem;
+}
+
+.how-do .tab-content{
+  margin-top: 5rem;
+}
+.nav-pills .nav-link{
+  text-align: start;
+  color: var(--light-grey-color) !important;
+  font-size: 24px;
+  font-weight: bold;
+  margin: .5rem 0;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--white-color) !important;
+  background-color: transparent !important;
+}
+
+.how-do .tab-pane{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.vision .text h2{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.vision .text p{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* blogs page */
+
+/*article section*/
+.articles{
+  background-color: var(--black3-color);
+}
+
+.articles .filter {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+  
+}
+.articles .filter::after{
+  position: absolute;
+  bottom: 0;
+  content:"";
+  width: 40%;
+  border-bottom: 1px solid var(--grey-color);
+}
+.articles .filter .btn{
+  color: var(--light-grey-color);
+  font-size: 20px;
+  border: none;
+}
+.articles .filter .btn.active{
+  color: var(--white-color);
+  border: none;
+}
+.articles .filter .btn:active {
+  border-color: unset !important;
+}
+.articles .all-articles{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 1.4rem;
+}
+.articles .card{
+  border: none;
+  background-color: transparent;
+  width: 32% !important;
+  /* margin: 0 1rem; */
+}
+.articles .card .card-img{
+  max-height: 350px;
+}
+
+.articles .card .card-info{
+  padding: .8rem 1rem;
+  background-color: var(--light-black-color);
+}
+.articles .card .card-info h5{
+  color: var(--grey2-color);
+  font-size: 16px !important;
+  margin-bottom: 0;
+}
+.articles .card .card-title{
+  font-size: 20px;
+  font-weight: bold;
+  margin: .5rem 0 .6rem 0;
+  color: var(--white-color);
+}
+
+.articles .card .body{
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--white-color);
+}
+.articles .card a.more{
+  display: flex;
+  justify-content: center;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-size: 20px;
+  font-weight: bold;
+  padding: .5rem 1rem;
+  margin: 1rem 0 0 0;
+  width: 50%;
+}
 
 
 
@@ -521,9 +805,21 @@ section.partners .owl-theme.services .owl-stage-outer {
 
 
   /* media query*/
+
+  @media (max-width : 1024px){
+    .other-header.about .card {
+      padding: 0rem 0rem 0rem 0;
+      margin: 0 2rem;
+  }
+  }
+
+
+
+
+
   @media (max-width: 991.98px) {
     nav.navbar {
-      padding: .9rem 0;
+      padding: 1.2rem 0;
   }
     section.about p{
       font-size: 18px;
@@ -542,7 +838,7 @@ section.partners .owl-theme.services .owl-stage-outer {
   section.projects .img-project {
     max-height: 210px;
 }
-footer .container .overlay img {
+ .overlay img {
   -o-object-fit: contain;
   object-fit: contain;
   width: 100%;
@@ -588,6 +884,45 @@ footer nav .nav-items .nav-item a {
 footer .email, footer .number, footer .email a, footer .number a {
   font-size: 13px;
 }
+.other-header.about .card {
+  padding: 0rem 1rem 0rem 1rem;
+  margin: 0 0rem;
+}
+.how-do .header {
+  padding: 0rem 0px 2rem;
+}
+.how-do .overlay {
+    height: 60%;
+    width: 40%;
+}
+.menu {
+  top: 68px;
+  height: calc(100vh - 68px) !important;
+}
+.menu .menu-nav {
+  padding: 2rem 2rem 1rem 0;
+}
+.menu-work .latest img {
+  width: 100%;
+}
+.articles .filter .btn {
+  font-size: 16px;
+}
+.articles .filter::after {
+    width: 60%;
+}
+.articles .filter {
+  gap: .5rem;  
+}
+.articles .card a.more {
+  font-size: 18px;
+  padding: 0.3rem .5rem;
+  width: 50%;
+}
+.articles .card{
+  width: 47% !important;
+  /* margin: 0 1rem; */
+}
   }
 
   @media (max-width: 768px) {
@@ -604,8 +939,12 @@ footer .email, footer .number, footer .email a, footer .number a {
 
   @media (max-width: 575.98px) {
     .header h2 {
-      font-size: 1.2rem;
+      font-size: 20px;
+      font-weight: bold;
     }
+    .nav-pills .nav-link {
+      font-size: 20px;
+  }
     section.about p{
       font-size: 16px;
       width: 80%;
@@ -665,5 +1004,28 @@ section.projects .img-project {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+}
+.other-header.about .card {
+  padding: 0rem 0rem 0rem 0;
+  margin: 0 0rem;
+}
+.how-do .tab-content {
+  margin-top: 2rem;
+}
+.vision .vision-img{
+  display: none !important;
+}
+.menu .img-menu-footer {
+  display: none;
+}
+.menu-work{
+  display: none;
+}
+.articles .filter::after {
+  width: 90%;
+}
+.articles .card{
+  width: 100% !important;
+  /* margin: 0 1rem; */
 }
   }
