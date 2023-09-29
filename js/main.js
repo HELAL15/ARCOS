@@ -5,19 +5,18 @@
 let bars = document.querySelector('.open');
 let close = document.querySelector('.close');
 let menu = document.getElementById('menu');
+let close_menu = document.querySelector('.close-menu');
 
-if(bars != null && close != null){
+if(bars != null && close_menu != null ){
   bars.addEventListener('click' , ()=>{
     bars.style.display = 'none';
-    close.style.display = 'block';
     menu.classList.add('active');
   })
-  close.addEventListener('click' , ()=>{
+
+  close_menu.addEventListener('click' , ()=>{
     bars.style.display = 'block';
-    close.style.display = 'none';
     menu.classList.remove('active');
   })
-
 
   function showBG() {
     let scroll = window.scrollY;
@@ -54,24 +53,24 @@ filter.forEach((btn) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const groupButtons = document.querySelectorAll(".filter-btn");
-  const cards = document.querySelectorAll(".articles .card");
+  const cards = document.querySelectorAll(".articles .card-main");
 
   groupButtons.forEach(function (button) {
       button.addEventListener("click", function () {
           const groupToShow = this.value;
 
-          // إخفاء جميع البطاقات أولاً
+          
           cards.forEach(function (card) {
               card.style.display = "none";
           });
 
           if (groupToShow === "all") {
-            // إذا تم النقر على "عرض الكل"، قم بإظهار جميع البطاقات
+            
             cards.forEach(function (card) {
                 card.style.display = "block";
             });
         } else {
-            // إظهار البطاقات التي تحتوي على القيمة المختارة
+            
             const groupCards = document.querySelectorAll("[value=" + groupToShow + "]");
             groupCards.forEach(function (card) {
                 card.style.display = "block";

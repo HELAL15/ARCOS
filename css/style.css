@@ -46,7 +46,15 @@
 }
 
 
+.rotate-on-hover {
+  display: inline-block !important;
+  transition: transform .5s; 
+}
 
+.rotate-on-hover:hover {
+  transform: rotate(360deg) !important; 
+  transition: transform .5s; 
+}
 
   
   body{
@@ -95,27 +103,32 @@ nav.navbar .nav-logo{
 /* menu nav*/
 
 .menu{
-  height: calc(100vh - 88px) !important;
+  height: 100% !important;
   background-color: var(--light-black-color);
   position: fixed;
-  top: 88px;left: -100%;
+  top: 0px;left: -100%;
   z-index: 2;
   width: 100%;
   transition: .3s;
+  
 }
 .menu.active{
   left: 0 !important;
-  height: calc(100vh - 72px) !important;;
+  overflow: hidden !important;
+  /* height: calc(100vh - 72px) !important; */
 }
 
 .menu .menu-nav{
   background-color: var(--light-color);
   height: 100%;
-  padding: 4rem 4rem 1rem 2rem;
+  padding: 2rem 4rem 1rem 2rem;
 }
 .menu .contacts{
   z-index: 2 !important;
   position: relative;
+}
+.menu .contacts .links{
+  gap: 10px;
 }
 .menu .menu-nav .menu-links{
   display: flex;
@@ -129,7 +142,7 @@ nav.navbar .nav-logo{
   color: var(--black-color);
   font-size: 22px;
   font-weight: bold;
-  margin: .5rem 0;
+  margin: 1.3rem 0;
 }
 
 .menu-nav .contacts .contacts-info a{
@@ -156,7 +169,7 @@ nav.navbar .nav-logo{
   color: var(--white-color) !important;
 }
 .menu-work{
-  padding: 4rem 0 0 4rem ;
+  padding: 2rem 0 0 2rem ;
 }
 .menu-work .latest h2{
   color: var(--white-color);
@@ -170,6 +183,8 @@ nav.navbar .nav-logo{
 .img-menu-footer{
   position: absolute;
   bottom: 2rem;
+  left: 0rem;
+  width: 92%;
 }
 
 
@@ -504,14 +519,16 @@ section.rights .container img{
 }
 
 .form-select {
-  padding: 0.75rem .75rem 0.75rem 0.75rem;
+  padding: 1rem .85rem ;
   background-position: left 0.75rem center;
   border-radius: 0 !important;
   border: none;
+  color: var(--light-grey-color);
+  font-size: 16px;
 }
 .form-control{
   border-radius: 0 !important;
-  padding: 0.75rem .75rem 0.75rem 0.75rem;
+  padding: 1rem .85rem;
   border: none;
 }
 .form-control:focus ,
@@ -540,9 +557,33 @@ section.contact-us .contact-body .contact-form h3{
 font-size: 24px;
 font-weight: bold;
 }
+/* section.contact-us .contact-body .contact-form .form-control{
+  font-size: 1.2rem;
+} */
 section.contact-us .contact-body .contact-form label{
   font-size: 16px;
-  margin-bottom: .3rem;
+  margin: .7rem 0;
+}
+section.contact-us .contact-body .contact-form input::-webkit-input-placeholder{
+  color: var(--light-grey-color);
+  font-size: 16px;
+}
+section.contact-us .contact-body .contact-form input::-moz-placeholder{
+  color: var(--light-grey-color);
+  font-size: 16px;
+}
+section.contact-us .contact-body .contact-form input:-ms-input-placeholder{
+  color: var(--light-grey-color);
+  font-size: 16px;
+}
+section.contact-us .contact-body .contact-form input::-ms-input-placeholder{
+  color: var(--light-grey-color);
+  font-size: 16px;
+}
+section.contact-us .contact-body .contact-form input::placeholder{
+  color: var(--light-grey-color);
+  font-size: 16px;
+  opacity: .5;
 }
 .contact-us .header h2{
   color: var(--black-color);
@@ -562,12 +603,13 @@ section.contact-us .contact-body .contact-form label{
 
 .contact-us .contacts{
   margin-right: 33rem;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
   justify-content: space-between;
 }
 
 .contact-us .contacts .links{
   align-items: flex-end;
+  margin-bottom: .7rem;
 }
 
 .contact-us .contacts .contacts-info h2{
@@ -739,6 +781,10 @@ section.partners .owl-theme.services .owl-stage-outer {
   font-weight: bold;
   margin: .5rem 0;
 }
+.nav-pills .nav-link h2{
+  font-size: 24px;
+  font-weight: bold;
+}
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: var(--white-color) !important;
   background-color: transparent !important;
@@ -796,18 +842,23 @@ section.partners .owl-theme.services .owl-stage-outer {
 .articles .all-articles{
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center;
-  align-items: center; */
   gap: 1.4rem;
 }
 .articles .card{
   border: none;
   background-color: transparent;
-  width: 32% !important;
-  /* margin: 0 1rem; */
+}
+.articles .card img{
+  height: 100%;
+}
+.articles .card:hover img{
+  transform: scale(1.3) ;
+  transition: .3s;
 }
 .articles .card .card-img{
+  height: 300px;
   max-height: 350px;
+  overflow: hidden;
 }
 
 .articles .card .card-info{
@@ -872,9 +923,20 @@ section.partners .owl-theme.services .owl-stage-outer {
   font-weight: bold;
   color: var(--black-color);
   padding-bottom: 1rem;
-  border-bottom: 3px solid var(--blue-color);
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  display: block;
 }
-
+.our-services .tab-pane .groups h5::after{
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 75% !important;
+  height: 3px !important;
+  background-color: var(--blue-color) !important;
+}
 .our-services .container{
   position: relative;
 }
@@ -1034,7 +1096,7 @@ section.partners .owl-theme.services .owl-stage-outer {
       margin-right: -3rem;
   }
   footer .logo img{
-    width: 50%;
+    width: 50% !important;
   }
   footer .contacts {
     gap: 2rem;
@@ -1099,9 +1161,13 @@ footer .email, footer .number, footer .email a, footer .number a {
     height: 60%;
     width: 40%;
 }
-.menu {
+/* .menu {
   top: 68px;
   height: calc(100vh - 68px) !important;
+} */
+.menu .contacts{
+  flex-wrap: wrap;
+  
 }
 .menu .menu-nav {
   padding: 2rem 2rem 1rem 0;
@@ -1142,6 +1208,16 @@ section.partners .owl-carousel.services .item {
 .single-project .nav-pills .nav-link {
   font-size: 18px;
 }
+.our-services .tab-pane .groups h5{
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--black-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  display: block;
+}
   }
 
   @media (max-width: 768px) {
@@ -1150,7 +1226,9 @@ section.partners .owl-carousel.services .item {
       width: 80%;
       margin-bottom: -.5rem;
     }
-   
+    .our-services .tab-pane .groups h5::after{
+      width: 100% !important;
+    }
   }
 
 
@@ -1233,6 +1311,17 @@ section.projects .img-project {
 }
 .vision .vision-img{
   display: none !important;
+}
+.menu .row{
+  flex-wrap: wrap-reverse;
+}
+
+.menu-work .latest img {
+    width: 60%;
+    height: 80% !important;
+}
+.menu-work {
+  padding: 2rem 2rem 0 2rem;
 }
 .menu .img-menu-footer {
   display: none;

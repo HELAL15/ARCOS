@@ -32,7 +32,7 @@
 <body>
   <nav class="navbar">
     <div class="container">
-      <img src="images/nav logo1.png" alt="" class="nav-logo">
+      <a href="index.html"><img src="images/nav logo1.png" alt="" class="nav-logo"></a>
       <div class="toggler">
         <i class="fas fa-bars open"></i>
         <i class="fas fa-close close"></i>
@@ -40,16 +40,16 @@
     </div>
     <div class="menu  " id="menu">
       <div class="row h-100">
-        <div class="col-md-5 h-100">
+        <div class="col-md-5 ">
           <div class="menu-nav">
             <div class="menu-links ">
-              <a href="index.html">الصفحه الرئيسيه</a>
+              <a href="index.html">الصفحه الرئيسية</a>
               <a href="who-we.html">اوركاس</a>
               <a href="services.html">الخدمات</a>
-              <a href="works.html">الاعمال</a>
+              <a href="works.html">الأعمال</a>
               <a href="contact-us.html">تواصل معنا</a>
             </div>
-            <div class="contacts d-flex justify-content-between flex-wrap">
+            <div class="contacts d-flex justify-content-between ">
               <div class="contacts-info d-flex flex-column">
                 <div class="email d-flex flex-wrap">
                   <h4>البريد الالكتروني</h4>
@@ -68,17 +68,18 @@
             </div>
           </div>
         </div>
-        <div class="col-md-7  h-100">
+        <div class="col-md-7  ">
           <div class="menu-work d-flex justify-content-between">
-            <div class="latest">
-              <h2>اخر الاعمال</h2>
+            <a class="latest" href="works.html">
+              <h2>اخر الأعمال</h2>
               <img src="images/menu.png" alt="" class="">
-            </div>
-            <a href="works.html"><i class="fas fa-arrow-left"></i></a>
+            </a>
+            <i class="fas fa-arrow-left close-menu"></i>
           </div>
+          <img src="images/Group 76682.png" alt="" class=" img-menu-footer">
         </div>
       </div>
-      <img src="images/Group 76682.png" alt="" class="w-100 img-menu-footer">
+
     </div>
   </nav>
 
@@ -99,102 +100,139 @@
         <button class="btn filter-btn" value="marketing">التسويق</button>
         <button class="btn filter-btn" value="programing">البرمجة</button>
       </div>
-      <div class="all-articles g-4 py-4">
+      <div class="all-articles  py-4">
 
-        <div class="card" value="marketing">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">التسويق</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
+        <div class="row g-4">
+
+          <div class="col-md-4 card-main" value="marketing">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">التسويق</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
           </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
+
+          <div class="col-md-4 card-main" value="design">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">التصميم</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 card-main" value="marketing">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">التسويق</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 card-main" value="programing">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">البرمجه</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 card-main" value="design">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">التصميم</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 card-main" value="marketing">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">التسويق</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 card-main" value="programing">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">البرمجه</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 card-main" value="marketing">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/blog.png" alt="" class="w-100 ">
+              </div>
+              <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
+                <h5 class="category">التسويق</h5>
+                <h5 class="time">منذ 5 دقائق</h5>
+              </div>
+              <div class="card-title ">تصميم موقع لعرض الصور</div>
+              <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
+                النهائية المطلوبة</div>
+              <a href="single-blog.html" class="more ">قراءة المزيد</a>
+            </div>
+          </div>
         </div>
 
-        <div class="card" value="design">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">التصميم</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
-          </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
-        </div>
-
-        <div class="card" value="marketing">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">التسويق</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
-          </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
-        </div>
-
-        <div class="card" value="programing">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">البرمجه</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
-          </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
-        </div>
-
-        <div class="card" value="design">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">التصميم</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
-          </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
-        </div>
-
-        <div class="card" value="marketing">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">التسويق</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
-          </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
-        </div>
-
-        <div class="card" value="programing">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">البرمجه</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
-          </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
-        </div>
-        <div class="card" value="marketing">
-          <img src="images/blog.png" alt="" class="w-100 card-img">
-          <div class="card-info d-flex justify-content-between align-items-center  my-3 ">
-            <h5 class="category">التسويق</h5>
-            <h5 class="time">منذ 5 دقائق</h5>
-          </div>
-          <div class="card-title ">تصميم موقع لعرض الصور</div>
-          <div class="body">وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص
-            النهائية المطلوبة</div>
-          <a href="single-blog.html" class="more ">قراءة المزيد</a>
-        </div>
       </div>
     </div>
   </section>
@@ -215,11 +253,11 @@
       </div>
       <nav class="">
         <ul class="nav-items ">
-          <li class="nav-item text-center"><a href="index.html" class="">الرئيسيه</a></li>
+          <li class="nav-item text-center"><a href="index.html" class="">الرئيسية</a></li>
           <li class="nav-item text-center"><a href="who-we.html" class="">من نحن؟</a></li>
-          <li class="nav-item text-center"><a href="works.html" class="">الاعمال</a></li>
+          <li class="nav-item text-center"><a href="works.html" class="">الأعمال</a></li>
           <li class="nav-item text-center"><a href="services.html" class="">الخدمات</a></li>
-          <li class="nav-item text-center"><a href="blogs.html" class="active">المدونه</a></li>
+          <li class="nav-item text-center"><a href="blogs.html" class="active">المقالات</a></li>
           <li class="nav-item text-center"><a href="policies.html" class="">سياسة الخصوصية</a></li>
           <li class="nav-item text-center"><a href="contact-us.html" class="">تواصل معنا</a></li>
         </ul>

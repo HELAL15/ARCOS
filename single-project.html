@@ -31,7 +31,7 @@
 <body>
   <nav class="navbar">
     <div class="container">
-      <img src="images/nav logo1.png" alt="" class="nav-logo">
+      <a href="index.html"><img src="images/nav logo1.png" alt="" class="nav-logo"></a>
       <div class="toggler">
         <i class="fas fa-bars open"></i>
         <i class="fas fa-close close"></i>
@@ -42,10 +42,10 @@
         <div class="col-md-5 h-100">
           <div class="menu-nav">
             <div class="menu-links ">
-              <a href="index.html">الصفحه الرئيسيه</a>
+              <a href="index.html">الصفحه الرئيسية</a>
               <a href="who-we.html">اوركاس</a>
               <a href="services.html">الخدمات</a>
-              <a href="works.html">الاعمال</a>
+              <a href="works.html">الأعمال</a>
               <a href="contact-us.html">تواصل معنا</a>
             </div>
             <div class="contacts d-flex justify-content-between flex-wrap">
@@ -69,15 +69,16 @@
         </div>
         <div class="col-md-7  h-100">
           <div class="menu-work d-flex justify-content-between">
-            <div class="latest">
-              <h2>اخر الاعمال</h2>
+            <a class="latest" href="works.html">
+              <h2>اخر الأعمال</h2>
               <img src="images/menu.png" alt="" class="">
-            </div>
-            <a href="works.html"><i class="fas fa-arrow-left"></i></a>
+            </a>
+            <i class="fas fa-arrow-left close-menu"></i>
           </div>
+          <img src="images/Group 76682.png" alt="" class=" img-menu-footer">
         </div>
       </div>
-      <img src="images/Group 76682.png" alt="" class="w-100 img-menu-footer">
+
     </div>
   </nav>
 
@@ -85,8 +86,9 @@
     <div class="container ">
       <div class="header-body">
         <div class="header-img w-100 my-5">
-          <!-- <img src="images/Group 76721.png" alt="" class="w-100"> -->
-          <video id="my-video" class="video-js w-100 vjs-theme-fantasy" controls autoplay muted preload="auto"
+
+          <img src="images/Logo light.png" alt="" class="w-100">
+          <!-- <video id="my-video" class="video-js w-100 vjs-theme-fantasy" controls autoplay muted preload="auto"
             height="550" poster="images/Group 76721.png" data-setup="{}">
             <source src="images/header.mp4" type="video/mp4" />
             <source src="MY_VIDEO.webm" type="video/webm" />
@@ -95,7 +97,7 @@
               web browser that
               <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
             </p>
-          </video>
+          </video> -->
         </div>
       </div>
     </div>
@@ -131,10 +133,14 @@
               <div class="nav  nav-pills flex-wrap " id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
                   data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-                  aria-selected="true">تصوير</button>
+                  aria-selected="true">
+                  <h2 class="rotate-on-hover">تصوير</h2>
+                </button>
                 <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                   data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                  aria-selected="false">تصميم سوشيال ميديا</button>
+                  aria-selected="false">
+                  <h2 class="rotate-on-hover">تصميم سوشيال ميديا </h2>
+                </button>
               </div>
             </div>
             <div class="col-md-8">
