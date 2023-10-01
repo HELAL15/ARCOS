@@ -93,6 +93,7 @@ if (Body.style.direction = 'rtl') {
 
 $('.owl-carousel.project-info').owlCarousel({
   rtl: rtlValue,
+  navText:["<i class='fa fa-angle-right mx-2'></i><div class='owl-btn'><span>(اسم المشروع)</span><h4 class=''>العمل التالي</h4></div>", "<div class='owl-btn'><span>(اسم المشروع)</span><h4 class=''>العمل السابق</h4></div><i class='fa fa-angle-left mx-2'></i>"],
   loop:true,
   margin:1,
   nav:true,

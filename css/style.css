@@ -189,6 +189,10 @@ nav.navbar .nav-logo{
   width: 60%;
   max-height: 100%;
 }
+.menu-work a.work img{
+  width: 60%;
+  max-height: 100%;
+  }
 .img-menu-footer{
   position: absolute;
   bottom: 2rem;
@@ -381,13 +385,29 @@ section.partners .owl-theme .owl-nav {
   position: absolute;
   top: 10%;
 }
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+.owl-theme .owl-nav .owl-btn{
+  background-color: transparent !important;
+
+}
+ .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
   font-size: 32px;
   width: 50px;
   height: 50px;
   background-color: var(--white-color);
 }
 .owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
+  background-color: var(--light-black-color);
+}
+.project .owl-carousel .owl-nav button.owl-next,.project  .owl-carousel .owl-nav button.owl-prev {
+  font-size: 32px;
+  width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 84px;
+  background-color: var(--white-color);
+}
+.project  .owl-carousel .owl-nav button.owl-next:hover,.project  .owl-carousel .owl-nav button.owl-prev:hover {
   background-color: var(--light-black-color);
 }
 section.partners .owl-carousel .item{
@@ -434,7 +454,7 @@ footer nav{
 }
 footer nav .nav-items{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -800,7 +820,7 @@ section.partners .owl-theme.services .owl-stage-outer {
   margin: .5rem 0;
 }
 .nav-pills .nav-link h2{
-  font-size: 24px;
+  font-size: 44px;
   font-weight: bold;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -1010,6 +1030,9 @@ section.partners .owl-theme.services .owl-stage-outer {
   background-color: var(--black-color);
   border: none;
 }
+.single-project .nav-pills .nav-link h2 {
+  font-size: 24px;
+}
 
 .single-project .gallary img{
   width: 100%;
@@ -1104,7 +1127,7 @@ section.partners .owl-theme.services .owl-stage-outer {
 
   @media (max-width: 991.98px) {
     nav.navbar {
-      padding: 1.2rem 0;
+      padding: .6rem 0;
   }
     section.about p{
       font-size: 18px;
@@ -1189,11 +1212,12 @@ footer .email, footer .number, footer .email a, footer .number a {
   
 }
 .menu .menu-nav {
-  padding: 2rem 2rem 1rem 0;
+  padding: .75rem;
 }
 .menu-work .latest img {
   width: 100%;
 }
+
 .articles .filter .btn {
   font-size: 16px;
 }
@@ -1273,7 +1297,7 @@ section.partners .owl-carousel.services .item {
     header .header-body .header-btns .btn{
       padding: 0.3rem 1rem;
       margin-left: 0rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
     section.services .services-row .service {
       padding: 1rem 1rem;
@@ -1351,7 +1375,7 @@ section.projects .img-project {
      object-fit: contain;
 }
 .menu-work {
-  padding: 2rem 2rem 0 2rem;
+  padding: .75rem;
 }
 .menu .img-menu-footer {
   display: none;
