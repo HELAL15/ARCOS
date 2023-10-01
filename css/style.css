@@ -8,6 +8,34 @@
   font-family: 'Janna LT', sans-serif;
   /* overflow: hidden; */
 }
+.style2, .style3 {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  transition: all 0.4s;
+  padding: .5rem .5rem .5rem 1rem;
+}
+.style2:after, .style3:after  {
+  content: attr(data-link);
+  background: #000;
+  color: #fff;
+  display: block;
+  transition: all 0.4s;
+  padding: .5rem .5rem .5rem 1rem;
+  border-radius: 5px 5px 5px 5px;
+  width: 100%;
+}
+.style3:after {
+  position: absolute;
+  top: 100%; 
+}
+.style3:hover{
+  top:-100%;
+}
+.style3:hover:after {
+  top:0;
+}
 :root {
 
   /* Colors: */
@@ -398,16 +426,16 @@ section.partners .owl-theme .owl-nav {
 .owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
   background-color: var(--light-black-color);
 }
-.project .owl-carousel .owl-nav button.owl-next,.project  .owl-carousel .owl-nav button.owl-prev {
+.project-info.owl-carousel .owl-nav button.owl-next,.project-info.owl-carousel .owl-nav button.owl-prev {
   font-size: 32px;
   width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 84px;
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
 }
-.project  .owl-carousel .owl-nav button.owl-next:hover,.project  .owl-carousel .owl-nav button.owl-prev:hover {
+.project-info.owl-carousel .owl-nav button.owl-next:hover,.project-info.owl-carousel .owl-nav button.owl-prev:hover {
   background-color: var(--light-black-color);
 }
 section.partners .owl-carousel .item{
@@ -454,7 +482,7 @@ footer nav{
 }
 footer nav .nav-items{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -1317,12 +1345,12 @@ footer nav .nav-items{
   gap: 1rem;
 }
 footer .contacts {
-  /* justify-content: center; */
+  justify-content: center;
   gap: 2rem;
 }
-/* footer .contacts-info {
+footer .contacts-info {
   justify-content: center;
-} */
+}
 footer .email, footer .number, footer .email a, footer .number a {
   /* flex-wrap: wrap; */
   gap: 0.3rem;
@@ -1392,5 +1420,11 @@ section.projects .img-project {
 }
 .owl-theme.project-info .owl-nav {
   margin: 0 1rem;
+}
+footer nav .nav-items{
+  justify-content: space-evenly;
+}
+.owl-theme .owl-nav .owl-btn h4 {
+  font-size: 18px;
 }
   }
