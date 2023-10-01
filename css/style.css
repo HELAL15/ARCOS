@@ -46,13 +46,13 @@
 }
 
 
-.rotate-on-hover {
+.trans-on-hover {
   display: inline-block !important;
   transition: transform .5s; 
 }
 
-.rotate-on-hover:hover {
-  transform: rotate(360deg) !important; 
+.trans-on-hover:hover {
+  transform: translateX(-20px) !important; 
   transition: transform .5s; 
 }
 
@@ -122,10 +122,15 @@ nav.navbar .nav-logo{
   background-color: var(--light-color);
   height: 100%;
   padding: 2rem 4rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  justify-content: space-between;
 }
 .menu .contacts{
   z-index: 2 !important;
   position: relative;
+  margin-bottom: 2rem;
 }
 .menu .contacts .links{
   gap: 10px;
@@ -135,7 +140,7 @@ nav.navbar .nav-logo{
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-  height: 75% ;
+  /* height: 75% ; */
   
 }
 .menu .menu-nav .menu-links a{
@@ -148,10 +153,14 @@ nav.navbar .nav-logo{
 .menu-nav .contacts .contacts-info a{
   color: var(--black-color);
 }
-.menu-nav .contacts .contacts-info .email ,
-.menu-nav .contacts .contacts-info .number{
-  margin: .5rem;
+.menu-nav .contacts .contacts-info .email {
+  margin-bottom: .75rem;
   gap: .5rem;
+  font-weight: bold;
+}
+.menu-nav .contacts .contacts-info .number{
+  gap: .5rem;
+  font-weight: bold;
 }
 .menu-nav .contacts .links a ,
 .menu-nav .contacts .links i{
@@ -183,7 +192,8 @@ nav.navbar .nav-logo{
 .img-menu-footer{
   position: absolute;
   bottom: 2rem;
-  left: 0rem;
+  left: 2rem;
+  right: 3rem;
   width: 92%;
 }
 
@@ -305,10 +315,16 @@ section.projects{
 section.projects .img-project,
 .project .img-project{
   position: relative;
-  max-height: 450px;
+  max-height: 400px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  transform: scaleY(.925);
+  transform-origin: top;
+  transition: .3s;
+}
+.project .img-project:hover{
+  transform: scaleY(1);
 }
 section.projects .img-project img ,
 .project .img-project img{
@@ -449,8 +465,8 @@ footer .contacts-info {
 }
 footer .email , footer .number ,
 footer .email a , footer .number a{
-  flex-wrap: wrap;
-  gap: 1rem;
+  /* flex-wrap: wrap; */
+  gap: .3rem;
   align-items: center;
   color: var(--white-color);
   font-size: 18px;
@@ -486,6 +502,7 @@ section.rights{
 }
 section.rights .container{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: .5rem;
@@ -619,8 +636,9 @@ section.contact-us .contact-body .contact-form input::placeholder{
 }
 
  .contacts .contacts-info h4{
-  font-size: 20px;
-  font-weight: 300;
+  /* font-size: 20px; */
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: 0rem !important;
 }
 .contact-us  .contacts-info .email ,
@@ -628,7 +646,7 @@ section.contact-us .contact-body .contact-form input::placeholder{
 .contact-us  .contacts-info .address{ 
   color: var(--black2-color) !important;
   gap: .5rem;
-  font-size: 18px;
+  font-size: 16px !important;
   align-items: center;
   margin-bottom: 1rem;
 }
@@ -996,6 +1014,7 @@ section.partners .owl-theme.services .owl-stage-outer {
 .single-project .gallary img{
   width: 100%;
   max-height: 350px;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
  
@@ -1270,15 +1289,19 @@ section.partners .owl-carousel.services .item {
     margin-right: -7rem;
 }
 footer nav .nav-items{
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 1rem;
 }
 footer .contacts {
-  justify-content: center;
+  /* justify-content: center; */
   gap: 2rem;
 }
-footer .contacts-info {
+/* footer .contacts-info {
   justify-content: center;
+} */
+footer .email, footer .number, footer .email a, footer .number a {
+  /* flex-wrap: wrap; */
+  gap: 0.3rem;
 }
 footer .email , footer .number ,
 footer .email a , footer .number a{
