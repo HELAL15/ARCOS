@@ -30,6 +30,10 @@
   position: absolute;
   top: 100%; 
 }
+.our-services .style3:after {
+  background: #fff;
+  color: #000;
+}
 .style3:hover{
   top:-100%;
 }
@@ -426,17 +430,32 @@ section.partners .owl-theme .owl-nav {
 .owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
   background-color: var(--light-black-color);
 }
-.project-info.owl-carousel .owl-nav button.owl-next,.project-info.owl-carousel .owl-nav button.owl-prev {
-  font-size: 32px;
-  width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 84px;
-  /* background-color: var(--white-color); */
+.project-info .proj-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 0;
 }
-.project-info.owl-carousel .owl-nav button.owl-next:hover,.project-info.owl-carousel .owl-nav button.owl-prev:hover {
+.project-info .proj-nav [class*=proj-] {
+  color: #FFF;
+  font-size: 14px;
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+}
+.project-info .proj-nav .proj-next,.project-info .proj-nav .proj-prev {
+  font-size: 32px;
+  width: 220px;
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
   background-color: var(--light-black-color);
+  color: var(--light-color);
+}
+.project-info .proj-nav .proj-next:hover,.project-info .proj-nav .proj-prev:hover {
+  background-color: var(--black-color);
 }
 section.partners .owl-carousel .item{
   display: flex;
